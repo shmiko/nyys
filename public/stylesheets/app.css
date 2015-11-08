@@ -96,6 +96,10 @@ body {
   background: #FFFFFF;
 }
 
+.comment-form {
+  color: #8d9caa;
+}
+
 .content {
   padding-top: 5px;
   white-space: pre-line;
