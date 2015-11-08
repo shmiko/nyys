@@ -77,7 +77,8 @@ router.get('/:post_id', function (req, res) {
   });
 });
 
-router.post('/:post_id/upvote', function (req, res) {
+// Upvote posts
+router.post('/:post_id/upvote', isLoggedIn, function (req, res, next) {
   models.Post.findById(req.params.post_id)
   .then(function (post) {
     post.addUser(req.user);
