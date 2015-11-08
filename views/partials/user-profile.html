@@ -1,0 +1,58 @@
+<div class="user-profile">
+  <div class="row">
+    <div class="col-md-1">
+      <p>user:</p>
+    </div>
+    <div class="col-md-11">
+      <p>{{user.username}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <p>created:</p>
+    </div>
+    <div class="col-md-11">
+      <p am-time-ago="user.createdAt"></p>
+    </div>
+  </div>
+
+  <div ng-if="user.id != currentUser.id">
+    <div class="row">
+      <div class="col-md-1">
+        <p>about:</p>
+      </div>
+      <div class="col-md-11">
+        <p class="content">{{user.bio}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="user.id == currentUser.id">
+    <p>{{message}}</p>
+    <form ng-submit="updateUser()">
+      <div class="row">
+        <div class="col-md-1">
+          <p>about:</p>
+        </div>
+        <div class="col-md-11">
+          <textarea cols="49" rows="3" name="bio" ng-model="user.bio">{{user.bio}}</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="profile-submit col-md-11">
+          <input type="submit" value="update">
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+      <a href='#/users/{{user.id}}/posts' class="posts-link">posts</a>
+    </div>
+  </div>
+</div>

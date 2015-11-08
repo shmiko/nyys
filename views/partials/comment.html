@@ -1,0 +1,11 @@
+<li ng-repeat="comment in comment.replies">
+  <div class="reply">
+    <p class="timestamp">
+      <span>by <a href="#/users/{{comment.User.id}}">{{comment.User.username}}</a></span>
+      <span am-time-ago="comment.createdAt"></span>
+    </p>
+    <p class="content">{{comment.content}}</p>
+    <a href="#/comments/{{comment.id}}" class="reply-link">reply</a>
+  </div>
+  <ul class="replies" ng-if="comment.replies" ng-include="'partials/comment.html'"></ul>
+</li>

@@ -1,0 +1,16 @@
+<div class="comment">
+  <p class="timestamp">
+    <span>by <a href="#/users/{{comment.User.id}}">{{comment.User.username}}</a></span>
+    <span am-time-ago="comment.createdAt"></span> |
+    <a href="#/posts/{{reply.PostId}}">parent</a>
+  </p>
+  <p class="content">{{comment.content}}</p>
+</div>
+<div class="comment-form">
+  <form ng-submit="submitReply()">
+    {{message}}
+    <textarea cols="49" name="content" ng-model="reply.content"></textarea><br>
+    <br>
+    <input type="submit" value="reply">
+  </form>
+</div>

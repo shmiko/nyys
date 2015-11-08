@@ -1,0 +1,32 @@
+<div class="post">
+  <span class="title" ng-if="!post.url"><a class="post-link" href="#/posts/{{post.id}}">{{post.title}}</a></span>
+  <span class="title" ng-if="post.url"><a class="post-link" href="{{post.url}}">{{post.title}}</a></span>
+  <span class="hostname" ng-if="post.url">({{post.hostname}})</span>
+  <p class="timestamp">
+    <span>by <a href="#/users/{{post.User.id}}">{{post.User.username}}</a> </span>
+    <span am-time-ago="post.createdAt"></span>
+  </p>
+  <p ng-if="post.content" class="content">{{post.content}}</p>
+</div>
+<div class="comment-form" ng-if="currentUser.id">
+  <p>{{message}}</p>
+  <form ng-submit="submitComment()">
+    <textarea cols="49" name="content" ng-model="comment.content"></textarea><br>
+    <br>
+    <input type="submit" value="add comment">
+  </form>
+</div>
+<ul class="comments">
+  <li ng-repeat="comment in comments">
+    <div class="comment">
+      <p class="timestamp">
+        <span>by <a href="#/users/{{comment.User.id}}">{{comment.User.username}}</a></span>
+        <span am-time-ago="comment.createdAt"></span>
+      </p>
+      <p class="content">{{ comment.content }}</p>
+      <a href="#/comments/{{comment.id}}" class="reply-link">reply</a>
+    </div>
+    <ul class="replies" ng-if="comment.replies" ng-include="'partials/comment.html'">
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="forumApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nyys。</title>
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <script src="components/angular/angular.min.js"></script>
+  <script src="components/angular-route/angular-route.min.js"></script>
+  <script src="components/moment/moment.js"></script>
+  <script src="components/angular-moment/angular-moment.js"></script>
+  <script src="components/angularUtils-pagination/dirPagination.js"></script>
+  <script src="dist/scripts.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="logo">
+        <span class="logo-title"><a href="#/">nyys。</a></span>
+        <div class="pull-right logo-links" ng-if="currentUser.id">
+          <a href="#/users/{{currentUser.id}}">profile</a>
+           |
+          <a href="#/submit">submit</a>
+           |
+          <a href="/logout">logout</a>
+        </div>
+
+        <div class="pull-right logo-links" ng-if="!currentUser.id">
+          <a href="/login">login</a>
+           |
+          <a href="/signup">signup</a>
+        </div>
+      </div>
+      <div ng-view></div>
+
+    </div>
+  </div>
+</body>
+</html>

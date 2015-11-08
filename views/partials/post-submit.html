@@ -1,0 +1,46 @@
+<div class="post-submit">
+  <form ng-submit="submitPost()">
+    <p>{{ message }}</p>
+    <legend>Create a new post</legend>
+    <input type="hidden" name="_csrf" value="{{csrftoken}}">
+    <div class="row title">
+      <div class="col-md-1 submit-label">
+        title
+      </div>
+      <div class="col-md-11">
+        <input type="text" name="title" class="field" ng-model="post.title" required>
+      </div>
+    </div>
+    <div class="row url">
+      <div class="col-md-1 submit-label">
+        url
+      </div>
+      <div class="col-md-11">
+        <input type="text" name="url" class="field" ng-model="post.url">
+      </div>
+    </div>
+    <div class="row or">
+      <div class="col-md-1 submit-label">
+      </div>
+      <div class="col-md-11">
+        <b>or</b>
+      </div>
+    </div>
+    <div class="row text">
+      <div class="col-md-1 submit-label">
+        text
+      </div>
+      <div class="col-md-11">
+        <textarea cols="49" rows="4" name="content" ng-init="post.content = ''" ng-model="post.content">
+        </textarea>
+      </div>
+    </div>
+    <div class="row submit">
+      <div class="col-md-1 submit-label">
+      </div>
+      <div class="col-md-11">
+        <input type="submit" value="submit">
+      </div>
+    </div>
+  </form>
+</div>

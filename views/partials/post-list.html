@@ -1,0 +1,28 @@
+<ul class="posts">
+  <li dir-paginate="post in posts | itemsPerPage: 10 | orderBy: age">
+    <div class="row">
+      <div class="upvote-button text-center col-md-1">
+        <a href="#" ng-click="upvote(post.id)" ng-if="!post.hasUserUpvoted"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        <span class="glyphicon glyphicon-chevron-up" ng-if="post.hasUserUpvoted"></span>
+      </div>
+      <div class="post-info col-md-11">
+        <span class="title" ng-if="!post.url"><a class="post-link" href="#/posts/{{post.id}}">{{post.title}}</a></span>
+        <span class="title" ng-if="post.url"><a class="post-link" href="{{post.url}}">{{post.title}}</a></span>
+        <span class="hostname" ng-if="post.url">({{post.hostname}})</span>
+        <p class="timestamp">
+          <span>
+            <ng-pluralize count="post.upvotes" when="{'0': '0 points', 'one': '1 point', 'other': '{} points'}">
+            </ng-pluralize>
+          </span>
+          <span>by <a href="#/users/{{post.User.id}}">{{post.User.username}}</a> </span>
+          <span am-time-ago="post.createdAt"></span> |
+          <a href="#/posts/{{post.id}}">
+            <ng-pluralize count="post.Comments" when="{'0': 'discuss', 'one': '1 comment', 'other': '{} comments'}">
+            </ng-pluralize>
+          </a>
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+<dir-pagination-controls template-url="partials/paginate.tpl.html" class="text-center"></dir-pagination-controls>

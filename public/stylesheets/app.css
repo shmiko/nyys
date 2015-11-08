@@ -1,0 +1,244 @@
+/* General */
+body {
+  background: #f9f9f9 !important;
+}
+
+/* Site header */
+.logo {
+  background: #FFFFFF;
+  padding: 10px 10px 10px 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #5f7387;
+}
+
+.logo a {
+  color: #5f7387;
+  text-decoration: none;
+}
+
+.logo-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 4px !important;
+}
+
+.logo-title a:hover {
+  text-decoration: none;
+}
+
+.logo-links {
+  padding-top: 4px !important;
+}
+
+.logo-links a:hover {
+  text-decoration: underline;
+}
+
+/* Post list on index page */
+.posts {
+  list-style: none;
+  padding: 0;
+}
+.posts li {
+  padding: 6px 10px 10px 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+}
+
+.upvote-button {
+  padding-top: 12px;
+  color: #5f7387;
+}
+
+.upvote-button a {
+  color: #8d9caa;
+}
+
+.upvote-button a:hover {
+  color: #5f7387;
+}
+
+.post-info {
+  padding-left: 0 !important;
+}
+
+.post-link {
+  font-size: 1.1em;
+  color: #5f7387;
+}
+
+.post-link:hover {
+  color: #5f7387;
+  text-decoration: none;
+}
+
+.post-link:visited {
+  color: #8d9caa;
+}
+
+.title {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+}
+
+.hostname {
+  color: #D9D9D9;
+  font-size: 0.9em;
+}
+
+/* Post-show & comment-show */
+.post, .comment-form,
+.comment, .reply {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+}
+
+.content {
+  padding-top: 5px;
+  white-space: pre-line;
+  color: #8d9caa;
+}
+
+.reply-link {
+  color: #5f7387;
+  text-decoration: none;
+}
+
+.reply-link:hover {
+  color: #5f7387;
+  text-decoration: underline;
+}
+
+.comments {
+  list-style: none;
+  padding: 0;
+}
+
+.replies {
+  list-style: none;
+}
+
+/* Timestamp, used in post-list, post-show and comment-show */
+.timestamp {
+  color: #D9D9D9;
+  margin: 0;
+}
+
+.timestamp a {
+  color: #D9D9D9;
+  text-decoration: none;
+}
+
+.timestamp a:hover {
+  color: #D9D9D9;
+  text-decoration: underline;
+}
+
+/* Post-submit */
+.post-submit {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  color: #8d9caa;
+}
+
+.post-submit legend {
+  color: #8d9caa;
+}
+
+.title, .url, .text, .submit {
+  padding: 5px 5px 5px 0px;
+}
+
+.or {
+  padding-left: 6px !important;
+}
+
+.submit-label {
+  padding-right: 0 !important;
+  width: 30px;
+}
+
+.field {
+  width: 50%;
+}
+
+/* User-profile & user-posts */
+.user-profile, .no-posts-message {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  color: #8d9caa;
+}
+
+.profile-submit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.posts-link {
+  color: #5f7387;
+  text-decoration: none;
+}
+
+.posts-link:hover {
+  color: #5f7387;
+  text-decoration: underline;
+}
+
+/* Login & Signup */
+.username, .password,
+.login-error, .signup-error {
+  padding: 10px 10px 10px 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  color: #5f7387;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
+
+.btn {
+  border: none;
+  padding: 10px 0px 10px 0px;
+  border-radius: 0 !important;
+  background: none;
+  color: #5f7387;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn:hover, .btn:focus, .btn:active:focus, .btn.active:focus {
+  background: none;
+  box-shadow: none;
+  color: #5f7387;
+  text-decoration: underline;
+}
+
+/* Pagination */
+.paginate {
+  padding-left: 0;
+}
+
+.paginate li{
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 15px;
+}
+
+.paginate a {
+  color: #5f7387;
+  text-decoration: none;
+}
+
+.paginate a:hover {
+  text-decoration: underline;
+}
+
+.paginate .active {
+  font-weight: bold;
+}
