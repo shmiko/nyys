@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate"
+    "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",
     "bluebird": "^3.0.5",
     "body-parser": "~1.13.2",
+    "bower": "^1.6.5",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.3.5",
     "csurf": "^1.8.3",
