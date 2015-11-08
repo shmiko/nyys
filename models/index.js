@@ -8,6 +8,14 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
+if (process.env.NODE_ENV === 'production') {
+  var sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialectOptions: {
+      ssl: true /* for SSL config since Heroku gives you this out of the box */
+    }
+  });
+}
+
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
