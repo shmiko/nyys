@@ -126,9 +126,9 @@ router.post('/:post_id/comment', isLoggedIn, function (req, res, next) {
     return res.status(400).send("can't post an empty comment");
   }
 
-  // content length validation, return an error if comment is longer than 1000 characters
-  if (req.body['content'].length > 1000) {
-    return res.status(400).send('comment too long, maximum is 1000 chars');
+  // content length validation, return an error if comment is longer than 3000 characters
+  if (req.body['content'].length > 3000) {
+    return res.status(400).send('comment too long, maximum is 3000 chars');
   }
 
   // Build a new comment, assign the id of the currently logged in user to UserId.

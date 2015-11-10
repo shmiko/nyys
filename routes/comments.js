@@ -27,9 +27,9 @@ router.post('/:comment_id/reply', isLoggedIn, function (req, res, next) {
     return res.status(400).send("can't post an empty reply");
   }
 
-  // content length validation, return an error if reply is longer than 1000 characters
-  if (req.body['content'].length > 1000) {
-    return res.status(400).send('reply too long, maximum is 1000 chars');
+  // content length validation, return an error if reply is longer than 3000 characters
+  if (req.body['content'].length > 3000) {
+    return res.status(400).send('reply too long, maximum is 3000 chars');
   }
 
   var newComment = models.Comment.build({
