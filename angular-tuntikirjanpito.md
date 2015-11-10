@@ -68,4 +68,7 @@ Tässä vaiheessa minifoin skriptini angular-boilerplate -reposta vedetyllä gul
 
 Sovellukseni alkaakin olla valmis ja toimintakunnossa, ainakin edge caseja lukuun ottamatta. Koska kuitenkin jouduin tutustumaan kehityksessa kokonaan uusiin teknologioihin, jouduin lähestymään tätä sovellusta test later -periaatteella tavallisen TDD:n sijasta. Vikana esteenä onkin testien kirjoittaminen modelien validatioineille sekä angularin form-validationeille. En koe $http.gettien ja postien testaamista tarpeelliseksi. Nämä jätän kuitenkin huomiselle, ja keskityn tänään sovellukseni deployaamiseen huomista demoa varten.
 
-# Tuntimäärä: 22
+## 1900-2100
+Deployaamiseen herokuun menee aika kauan aikaa. Pitää muokata `bin/www` -tiedostoa synkkaamaan sequelizen modelit aina kun sovellus käynnistyy. Lisäksi `models/index.js` -tiedostoon pitää lisätä oma kohta tuotantotietokantaa varten. Joudun myös lisäilemään muutamia puuttuvia riippuvuuksia kuten `bower` `pg` ja `pg-hstore` `package.json` -tiedostoon. Tämän lisäksi lisään `package.json`iin `postinstall`-skriptin, joka suorittaa bower installin npm:n asennettua bowerin. Tämän jälkeen applikaatio toimiikin mutkatta, mutta en löytänyt mitään hyvää mock datan generoivaa virveliä omiin tarpeisiini, joten joudun luomaan käsin käyttäjät ja postaukset.
+
+# Tuntimäärä: 24
